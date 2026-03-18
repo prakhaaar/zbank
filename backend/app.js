@@ -16,16 +16,24 @@ app.use(helmet());
 
 const allowedOrigins = [
   "https://zbank.prakharhq.site",
-  ...(process.env.NODE_ENV === "development" ? ["http://localhost:3000"] : []),
+  "http://localhost:3000",
 ];
 
 app.use(
   cors({
-    origin: true,
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true); // mobile/postman
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      console.log("❌ CORS BLOCKED:", origin);
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   }),
-); //Temporarily relaxed CORS for debugging mobile clients”
-
+);
 // request logger
 app.use(morgan("dev"));
 
