@@ -29,6 +29,28 @@ A full-stack banking application with user accounts, deposits, and money transfe
 
 ---
 
+## 📸 Screenshots
+
+### 🔐 Login
+
+![Login](frontend/public/login.png)
+
+### 📝 Register
+
+![Register](frontend/public/signup.png)
+
+### 📊 Dashboard
+
+![Dashboard](frontend/public/dashboard.png)
+
+### 💸 Transfer Money
+
+![Transfer](frontend/public/transaction.png)
+
+### ✅ Transaction Success
+
+![Success](frontend/public/transactiondone.png)
+
 ## Project Structure
 
 ```

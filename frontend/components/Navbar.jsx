@@ -57,7 +57,7 @@ export default function Navbar({ user, showBack = false }) {
           className="text-sm text-gray-400 hover:text-red-500 transition-colors"
           title="Logout"
         >
-          🚪
+          Logout 🚪
         </button>
 
         <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#010935] to-[#00baf2] flex items-center justify-center text-white text-sm font-semibold">
