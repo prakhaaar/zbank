@@ -11,7 +11,6 @@ const fadeUp = (delay = 0) => ({
 export default function Welcome({ USER }) {
   return (
     <motion.div {...fadeUp(0.1)} className="mb-8">
-      <p className="text-sm text-gray-400 mb-1">Good morning 👋</p>
       {new Date().getHours() < 12
         ? "Good morning"
         : new Date().getHours() < 18
