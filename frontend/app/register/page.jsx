@@ -38,19 +38,30 @@ export default function Register() {
 
   const nextStep = () => {
     setError("");
-    if (step === 0 && (!form.name || !form.email))
-      return setError("Please fill all fields");
+
+    if (step === 0) {
+      if (!form.name || !form.email) return setError("Please fill all fields");
+      if (form.name.trim().length < 2)
+        return setError("Name must be at least 2 characters");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+        return setError("Please enter a valid email");
+    }
 
     if (step === 1) {
       if (!form.phone_no || !form.password)
         return setError("Please fill all fields");
+      if (form.phone_no.trim().length < 10 || form.phone_no.trim().length > 15)
+        return setError("Phone number must be 10–15 digits");
+      if (!/^\d+$/.test(form.phone_no.trim()))
+        return setError("Phone number must contain only digits");
+      if (form.password.length < 8)
+        return setError("Password must be at least 8 characters");
       if (form.password !== form.confirmPassword)
         return setError("Passwords do not match");
     }
 
     setStep(step + 1);
   };
-
   const handleSubmit = async () => {
     setError("");
     setLoading(true);
