@@ -36,7 +36,9 @@
     "components/transactions/TransactionSummary.jsx",
     "components/transactions/TransactionList.jsx",
     "components/transactions/TransactionDetailModal.jsx",
-    "lib/bot.js"
+    "lib/bot.js",
+    "app/transactionhistory/page.jsx",
+    "app/deposit/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

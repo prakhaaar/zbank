@@ -11,17 +11,12 @@ const pool = new Pool({
   connectionTimeoutMillis: 10000,
 });
 
-console.log(
-  "🔍 DB URL:",
-  process.env.DATABASE_URL?.replace(/:[^:@]+@/, ":***@"),
-);
-
 pool.connect((err, client, release) => {
   if (err) {
-    console.error("❌ Database connection failed:", err.message);
+    console.error(" Database connection failed:", err.message);
     return;
   }
-  console.log("✅ Database connected");
+  console.log(" Database connected");
   release();
 });
 
