@@ -13,7 +13,7 @@ export default function Transactions({ TRANSACTIONS, formatINR }) {
           Recent Transactions
         </h2>
 
-        {/* ✅ navigation added */}
+        {/*  navigation added */}
         <button
           onClick={() => router.push("/transactionhistory")}
           className="text-xs text-[#00baf2] hover:underline font-medium"

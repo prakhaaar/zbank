@@ -17,7 +17,7 @@ export default function Navbar({ user, showBack = false }) {
     try {
       await bot.logout();
     } catch (_) {
-      // silent fail — still clear local state
+      // silent fail  still clear local state
     } finally {
       localStorage.removeItem("token");
       localStorage.removeItem("user");
@@ -42,11 +42,15 @@ export default function Navbar({ user, showBack = false }) {
           </button>
         )}
 
-        <div className="relative w-9 h-9">
-          <Image src="/logo.png" alt="ZBank" fill className="object-contain" />
+        <div className="relative w-20 h-20">
+          <Image
+            src="/logo.png"
+            alt="ZBank"
+            fill
+            className="object-contain"
+            onClick={() => router.push("/dashboard")}
+          />
         </div>
-
-        <span className="text-lg font-semibold text-[#010935]">ZBank</span>
       </div>
 
       {/* RIGHT */}

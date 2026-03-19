@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "ZBank — Smarter Banking",
+    default: "ZBank Smarter Banking",
     template: "%s | ZBank",
   },
   description:
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://zbank.io",
-    title: "ZBank — Smarter Banking",
+    url: "https://zbank.prakharhq.site",
+    title: "ZBank  Smarter Banking",
     description:
       "Create bank accounts, transfer money between accounts, and track every transaction in real time. Smarter banking built for precision.",
     siteName: "ZBank",

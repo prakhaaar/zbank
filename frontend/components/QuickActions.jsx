@@ -35,7 +35,7 @@ export default function QuickActions({ activeAction, setActiveAction }) {
             whileHover={{ scale: 1.02 }}
             onClick={() => {
               setActiveAction(action.label); // existing behavior
-              router.push(action.route); // ✅ navigation added
+              router.push(action.route); //  navigation added
             }}
             className={`flex items-center gap-4 p-5 rounded-2xl border transition-all text-left
               ${
